@@ -15,4 +15,5 @@ class ItemsModel(models.Model):
     image = models.ImageField(upload_to='photos/products', blank=True)
     
     
-user = models.OneToOneField(User, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
