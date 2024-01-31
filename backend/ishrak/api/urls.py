@@ -11,5 +11,7 @@ urlpatterns = [
     path('items/',views.DataList.as_view()),
     path('items/<int:pk>/', views.DataUpdateDelete.as_view()),
     path('items/search/', views.ProductSearchAPIView.as_view(), name='product-search'),
-    path('admin/', views.AdminDashboard.as_view(), name='admin_dashboard'),
+    path('login/', views.LoginView.as_view(), name='login'),
+    path('register/', views.RegistrationView.as_view(), name='register'),
+    path('logout/', views.LogoutView.as_view(), name='logout'),
 ]
